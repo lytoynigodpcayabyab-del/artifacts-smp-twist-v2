@@ -2,7 +2,6 @@ package dev.twist.artifacts;
 
 import dev.twist.artifacts.artifact.ArtifactManager;
 import dev.twist.artifacts.artifact.CooldownManager;
-import dev.twist.artifacts.artifacts.DeepDarkChalice;
 import dev.twist.artifacts.artifacts.HeartOfTheSculk;
 import dev.twist.artifacts.artifacts.ParticleRayArray;
 import dev.twist.artifacts.artifacts.PhoenixEmber;
