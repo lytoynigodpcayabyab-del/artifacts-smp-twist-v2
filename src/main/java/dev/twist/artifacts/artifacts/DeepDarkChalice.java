@@ -3,7 +3,7 @@ package dev.twist.artifacts.artifacts;
 import dev.twist.artifacts.TwistPlugin;
 import dev.twist.artifacts.artifact.Artifact;
 import dev.twist.artifacts.util.Util;
-import org.bukkit.event.entity.EntityPickupItemEvent;
+import io.papermc.paper.event.player.PlayerPickupExperienceEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -99,7 +99,7 @@ public final class DeepDarkChalice extends Artifact implements Listener {
         Util.tempAttr(plugin, p, Attribute.MAX_HEALTH, "chalice_sacrifice", -4.0,
                 AttributeModifier.Operation.ADD_NUMBER, cfgInt("sacrifice-return-seconds", 45) * 20);
         int ticks = cfgInt("burst-seconds", 10) * 20;
-        p.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, ticks, 3, true, true, true));   // Absorption IV
+        p.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, ticks, 3, true, true, true));    // Absorption IV
         lifestealUntil.put(p.getUniqueId(), Bukkit.getCurrentTick() + ticks);
         p.getWorld().spawnParticle(Particle.SCULK_SOUL, p.getLocation().add(0, 1, 0), 30, 0.5, 0.8, 0.5, 0.05);
         p.getWorld().playSound(p.getLocation(), Sound.ENTITY_PLAYER_BURP, 1f, 0.5f);
