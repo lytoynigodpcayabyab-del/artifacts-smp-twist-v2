@@ -3,7 +3,7 @@ package dev.twist.artifacts.artifacts;
 import dev.twist.artifacts.TwistPlugin;
 import dev.twist.artifacts.artifact.Artifact;
 import dev.twist.artifacts.util.Util;
-import io.papermc.paper.event.player.PlayerPickupExperienceEvent;
+import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
