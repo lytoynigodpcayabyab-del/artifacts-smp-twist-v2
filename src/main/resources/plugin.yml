@@ -1,0 +1,33 @@
+name: TwistArtifacts
+version: '2.0.0'
+main: dev.twist.artifacts.TwistPlugin
+api-version: '1.21'
+description: Custom magical Artifacts with passive effects and active abilities.
+author: TwistDev
+
+commands:
+  artifact:
+    description: Give, list or reload Twist artifacts.
+    usage: /artifact <give|list|reload>
+    aliases: [art]
+    permission: twist.artifact.admin
+
+  offhand:
+    description: Trigger ability 1 of the artifact in your hand (same as pressing F).
+    usage: /offhand
+    permission: twist.artifact.use
+  crouchoffhand:
+    description: Trigger ability 2 of the artifact in your hand (same as Shift+F).
+    usage: /crouchoffhand
+    permission: twist.artifact.use
+
+permissions:
+  twist.artifact.admin:
+    description: Allows /artifact give, list and reload.
+    default: op
+  twist.artifact.use:
+    description: Allows players to trigger artifact active abilities.
+    default: true
+  twist.artifact.bypass:
+    description: Immune to artifact auras and domains (staff / testing).
+    default: false

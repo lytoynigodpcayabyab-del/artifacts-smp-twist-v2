@@ -1,0 +1,158 @@
+# ============================================================
+#  Twist Artifacts - configuration
+#  NOTE: material / custom-model-data are baked into an item when it is
+#  created. Changing them only affects items given AFTER /artifact reload.
+#  Identification is by PDC tag, so old items keep working regardless.
+# ============================================================
+settings:
+  # How often (ticks) passive effects / auras are evaluated. 10 = twice a second.
+  passive-check-interval-ticks: 10
+
+artifacts:
+  # ---------------- two-ability artifacts: F = ability 1, Shift+F = ability 2 (also /offhand, /crouchoffhand) -------
+  star_of_invisibility:
+    material: NETHER_STAR
+    custom-model-data: 1001
+    radius: 12.0
+    darkness-seconds: 3
+    passive-health-threshold: 6.0     # HP (6 = 3 hearts)
+    passive-cooldown: 60
+    ability1-cooldown: 90
+    swift-seconds: 10
+    ability2-cooldown: 120
+    debuff-seconds: 30
+
+  void_capsule:
+    material: ENDER_PEARL
+    custom-model-data: 1002
+    ability1-cooldown: 120
+    dome-radius: 10.0                 # dome is 10 blocks wide at this setting (radius value as in v2)
+    dome-seconds: 40
+    ability2-cooldown: 45
+    pull-radius: 7.5
+    pull-seconds: 5
+    pull-damage-per-second: 1.0
+
+  particle_ray_array:
+    material: PRISMARINE_CRYSTALS
+    custom-model-data: 1006
+    bonus-reach: 2.0
+    trail-ticks: 60
+    ability1-cooldown: 240
+    laser-seconds: 10
+    laser-range: 40.0
+    laser-damage: 1.0                 # TRUE damage per hit, one hit every 0.1s (1.0 HP = 0.5 hearts)
+    ability2-cooldown: 180
+    radar-radius: 50.0
+    radar-seconds: 120
+
+  vitalis_relic:
+    material: GLISTERING_MELON_SLICE
+    custom-model-data: 1007
+    ability1-cooldown: 120
+    overcharge-hearts: 5
+    overcharge-seconds: 30
+    ability2-cooldown: 240
+    heal-hearts: 5
+    buff-seconds: 60
+
+  umbral_abyss:
+    material: BLACK_DYE
+    custom-model-data: 1008
+    detect-radius: 16.0
+    detect-glow: true                 # Glowing is what makes targets visible through walls (visible to everyone)
+    ability1-cooldown: 90
+    burrow-seconds: 6
+    pop-damage: 4.0                   # 2 hearts
+    pop-radius: 4.0
+    ability2-cooldown: 120
+    grasp-range: 30.0
+    grasp-damage: 8.0                 # 4 hearts, true damage
+
+  sanguine_fang:
+    material: FERMENTED_SPIDER_EYE
+    custom-model-data: 1009
+    wounded-range: 32.0
+    ability1-cooldown: 90
+    bite-range: 2.0
+    bite-seconds: 30
+    bleed-seconds: 5
+    bleed-damage-per-second: 1.0
+    ability2-cooldown: 90
+    bat-range: 30.0
+    bat-damage: 2.0                   # 1 heart per bat, true damage
+    bat-seconds: 8
+
+  heart_of_the_sculk:
+    material: ECHO_SHARD
+    custom-model-data: 1010
+    ability1-cooldown: 120
+    shockwave-radius: 10.0
+    steal-hp: 8.0                     # 4 hearts, true damage
+    darkness-seconds: 10
+    ability2-cooldown: 120
+    tether-range: 25.0
+    tether-seconds: 5
+
+  void_rift:
+    material: DISC_FRAGMENT_5
+    custom-model-data: 1011
+    absorb-chance: 0.25
+    ability1-cooldown: 180
+    summon-seconds: 30
+    ability2-cooldown: 120
+    tendril-range: 25.0
+    root-seconds: 3
+
+  deep_dark_chalice:
+    material: DRAGON_BREATH
+    custom-model-data: 1012
+    passive-seconds: 15
+    ability1-cooldown: 120
+    sacrifice-return-seconds: 45
+    burst-seconds: 10
+    lifesteal: 0.30
+    ability2-cooldown: 120
+    pool-range: 20.0
+    pool-seconds: 10
+    pool-damage: 1.0                  # per 0.5s pulse
+    pool-heal-per-hit: 1.0
+
+  wither_drawn_shield:
+    material: SHIELD
+    custom-model-data: 1013
+    passive-cooldown: 10
+    passive-wither-seconds: 3
+    ability1-cooldown: 90
+    absorb-seconds: 3
+    blast-range: 8.0
+    blast-wither-seconds: 5
+    ability2-cooldown: 180
+    dome-radius: 6.0
+    dome-seconds: 15
+    ally-reduction: 0.30
+    leech-hp: 3.0                     # 1.5 hearts
+
+  # ---------------- legacy single-ability artifacts (right-click), unchanged ----------------
+  tidal_heart:
+    material: HEART_OF_THE_SEA
+    custom-model-data: 1003
+    cooldown-seconds: 25
+    radius: 8.0
+    knockback: 1.4
+
+  phoenix_ember:
+    material: FIRE_CHARGE
+    custom-model-data: 1004
+    cooldown-seconds: 40
+    launch-power: 1.6
+    ignite-radius: 6.0
+    ignite-seconds: 5
+
+  stormcaller_idol:
+    material: LIGHTNING_ROD
+    custom-model-data: 1005
+    cooldown-seconds: 45
+    radius: 16.0
+    max-targets: 5
+    damage: 8.0
