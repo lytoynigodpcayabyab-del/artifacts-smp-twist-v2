@@ -68,7 +68,6 @@ public final class TwistPlugin extends JavaPlugin {
         artifacts.register(new SanguineFang(this));
         artifacts.register(new HeartOfTheSculk(this));
         artifacts.register(new VoidRift(this));
-        artifacts.register(new DeepDarkChalice(this));
         artifacts.register(new WitherDrawnShield(this));
 
         // Command registration (must also be declared in plugin.yml)
